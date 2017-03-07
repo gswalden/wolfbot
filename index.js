@@ -8,7 +8,7 @@ const yahooFinance = require('yahoo-finance')
 function messageHandler(msg) {
   if (!msg.text) return;
 
-  const match = msg.text.toUpperCase().match(/!QUOTE\s+([A-Z]+)/i);
+  const match = msg.text.toUpperCase().match(/!QUOTE\s+([A-Z]+)/);
   if (!match) return;
 
   return yahooFinance.snapshot({
