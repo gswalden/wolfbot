@@ -1,0 +1,21 @@
+{
+  "name": "wolfbot",
+  "version": "1.0.0",
+  "description": "Telegram bot for stock quotes",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js",
+    "poststart": "pm2 logs all"
+  },
+  "author": "Greg Walden <talk@gsw.nyc>",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot": "depoio/node-telegram-bot",
+    "pm2": "^2.4.2",
+    "yahoo-finance": "^0.2.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gswalden/wolfbot.git"
+  }
+}
