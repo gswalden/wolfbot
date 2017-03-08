@@ -17,7 +17,7 @@ function messageHandler(msg) {
   }).then(quote => {
     bot.sendMessage({
       chat_id: msg.chat.id,
-      text: `${quote.name.trim()}: $${quote.lastTradePriceOnly.toFixed(2)}`
+      text: `${quote.name || quote.symbol}: $${quote.lastTradePriceOnly.toFixed(2)}`
     })
   })
 }
